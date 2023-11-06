@@ -39,3 +39,5 @@ x2 = (-b - D ** (1/2)) / (2 * a);
 
 console.log('x1 =', x1);
 console.log('x2 =', x2);
+
+
