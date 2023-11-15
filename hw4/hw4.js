@@ -76,4 +76,4 @@ if (someInfo.toLowerCase() === 'true' || someInfo.toLowerCase() === 'false') {
     console.log('You entered a number');
 } else {
     console.log('You entered a complex data;');
-}  //<----------------- перший спосіб
+}  //<-------------------другий спосіб
