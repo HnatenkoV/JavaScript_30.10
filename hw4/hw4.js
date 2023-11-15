@@ -7,38 +7,38 @@
 // Non Divisible, якщо число не ділиться на 3 чи на 5.
 //
 //
-console.log("=================1)=================");
+console.log('=================1)=================');
 
-let someNum = prompt("введіть будь яке число");
+let someNum = prompt('введіть будь яке число');
 
 if (isNaN(someNum)) {
-    console.log("введене значення не э числом")
+    console.log('введене значення не э числом');
 } else if (someNum % 3 === 0 && someNum % 5 === 0) {
-    console.log("FizzBuzz")
+    console.log('FizzBuzz');
 } else if (someNum % 3 === 0) {
-    console.log("Fizz")
+    console.log('Fizz');
 } else if (someNum % 5 === 0) {
-    console.log("Buzz")
+    console.log('Buzz');
 } else {
-    console.log("Non Divisible")
+    console.log('Non Divisible');
 }     // <----------перший спосіб
 
 if (!isNaN(someNum)) {
     switch (true) {
         case someNum % 3 === 0 && someNum % 5 === 0:
-            console.log("FizzBuzz");
+            console.log('FizzBuzz');
             break;
         case someNum % 3 === 0:
-            console.log("Fizz");
+            console.log('Fizz');
             break;
         case someNum % 5 === 0:
-            console.log("Buzz");
+            console.log('Buzz');
             break;
         default:
-            console.log("Non Divisible");
+            console.log('Non Divisible');
     }
 } else {
-    console.log("введене значення не э числом");
+    console.log('введене значення не э числом');
 } // <----------------другий спосіб
 
 
@@ -53,20 +53,20 @@ if (!isNaN(someNum)) {
 // Будьте уважні! Зверніть увагу на те, в якому регістрі введено дані (lower/upper case) - False та false мають бути однаково визначені як тип boolean.
 //     При вирішенні цих задач також зверніть увагу на обробку виключень: якщо, на вашу думку, вони можуть виникнути - використовуйте відповідну та коректну конструкцію коду для цього.
 
-console.log("=================2)=================");
+console.log('=================2)=================');
 
-let someInfo = prompt("введіть будь яке значення");
+let someInfo = prompt('введіть будь яке значення');
 
 
     switch (true) {
         case someInfo.toLowerCase() === 'true' || someInfo.toLowerCase() === 'false':
-            console.log("You entered a boolean;");
+            console.log('You entered a boolean;');
             break;
         case !isNaN(someInfo) :
-            console.log("You entered a number");
+            console.log('You entered a number');
             break;
         default:
-            console.log("You entered a complex data;");
+            console.log('You entered a complex data;');
     }  //<----------------- перший спосіб
 
 
