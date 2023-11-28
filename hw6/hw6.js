@@ -75,13 +75,41 @@ function palindrome (palindromeWord) {
         return;
     }
 
-    let reverseWord = '';
+    // let reverseWord = '';
+    //
+    // for (let i = 0; i < palindromeWord.length; i++) {
+    //     reverseWord = palindromeWord[i] + reverseWord;
+    // }
+    //
+    // (palindromeWord === reverseWord) ? console.log(`'${palindromeWord}' ---> 'true'`)
+    // : console.log(`'${palindromeWord}' ---> 'false'`);   //<----- старий варіант
 
-    for (let i = 0; i < palindromeWord.length; i++) {
-        reverseWord = palindromeWord[i] + reverseWord;
+    // let i = 0;
+    // let j = palindromeWord.length - 1;
+    //
+    // while (i < j) {
+    //     if (palindromeWord[i] !== palindromeWord[j]) {
+    //         console.log(`'${palindromeWord}' ---> 'false'`);
+    //         return false;
+    //     }
+    //     i++;
+    //     j--;
+    // }
+    //
+    // console.log(`'${palindromeWord}' ---> 'true'`);
+    // return true;  // <---- варіант через цикл while
+
+
+    let j = palindromeWord.length - 1;
+    for (let i = 0; i < j; i++, j--) {
+        if (palindromeWord[i] !== palindromeWord[j]) {
+            console.log(`'${palindromeWord}' ---> 'false'`);
+            return false;
+        }
     }
+    console.log(`'${palindromeWord}' ---> 'true'`);
+    return true; // <---- варіант через цикл for
 
-    (palindromeWord === reverseWord) ? console.log(`'${palindromeWord}' ---> 'true'`) : console.log(`'${palindromeWord}' ---> 'false'`);
 } // можна ще додати palindromeWord = palindromeWord.toLowerCase() щоб привести всі букви до нижньго регістру
 
 palindrome('');
@@ -118,7 +146,20 @@ function strToInt2 (someStr, newSystem) {
         }
     }
     return result;
-} //<----- аби можна було задавати строку та довільну систему числення потрібно оголосити в функції ще 1 параметр newSystem відповідно цім параметром я задаю систему числення
+} //<----- аби можна було задавати строку та довільну систему числення потрібно оголосити в функції ще 1 параметр newSystem
+// відповідно цим параметром я задаю систему числення
 
 console.log(strToInt2 ('101', 2));
 console.log(strToInt2 ('101', 5));
+
+function strToInt3(someStr) {
+    let result = 0;
+
+    for (let i = 0; i < someStr.length; i++) {
+        let someChar = someStr[i] - '0';
+        result = result * 10 + someChar;
+    }
+    return result;
+}
+
+console.log(strToInt3 ('376'));
