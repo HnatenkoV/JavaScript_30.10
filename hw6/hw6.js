@@ -100,9 +100,8 @@ function palindrome (palindromeWord) {
     // return true;  // <---- варіант через цикл while
 
 
-    let j = palindromeWord.length - 1;
-    for (let i = 0; i < j; i++, j--) {
-        if (palindromeWord[i] !== palindromeWord[j]) {
+    for (let i = 0; i < palindromeWord.length - 1; i++) {
+        if (palindromeWord[i] !== palindromeWord[palindromeWord.length - 1 - i]) {
             console.log(`'${palindromeWord}' ---> 'false'`);
             return false;
         }
@@ -119,47 +118,16 @@ palindrome('string');
 
 console.log('=============3. Із строки у число=============')
 
-function strToInt (someStr) {
+function strToInt(someStr, newSystem) {
     let result = 0;
     for (let i = 0; i < someStr.length; i++) {
         let someChar = someStr[i] - '0';
-        if (someChar >= '0' && someChar <= '9') {
-            result = result * 10 + someChar;
-        } else {
-            break;
-        }
-    }
-    return result;
-}
 
-console.log(strToInt('15'));
-console.log(strToInt('376'));
-
-function strToInt2 (someStr, newSystem) {
-    let result = 0;
-    for (let i = 0; i < someStr.length; i++) {
-        let someChar = someStr[i] - '0';
-        if (someChar >= '0' && someChar <= '9') {
-            result = result * newSystem + someChar;
-        } else {
-            break;
-        }
+        result = result * newSystem + someChar;
     }
     return result;
 } //<----- аби можна було задавати строку та довільну систему числення потрібно оголосити в функції ще 1 параметр newSystem
 // відповідно цим параметром я задаю систему числення
 
-console.log(strToInt2 ('101', 2));
-console.log(strToInt2 ('101', 5));
 
-function strToInt3(someStr) {
-    let result = 0;
-
-    for (let i = 0; i < someStr.length; i++) {
-        let someChar = someStr[i] - '0';
-        result = result * 10 + someChar;
-    }
-    return result;
-}
-
-console.log(strToInt3 ('376'));
+console.log(strToInt ('101', 2));
