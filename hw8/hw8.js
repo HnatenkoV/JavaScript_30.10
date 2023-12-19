@@ -16,8 +16,8 @@ function loggingDecorator(funcName) {
        } // тут використовую цикл щоб вивести через кому всі аргументи
        console.log(functionName + ', args: ' + argsString); //тут виводжу в консоль імя функції та всі аргументи
 
-       const res = funcName.apply(null, arg);
-       return res; //тут створюю змінну res куди зберігаю результат виклику функції і повертаю його
+       return funcName.apply(null, arg); //тут повертаю результат
+
    }
 }
 
